@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/item_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingVertical="8dp"
+        android:paddingHorizontal="8dp"
+        android:background="@drawable/nav_item_state_background">
+
+        <ImageView
+            android:id="@+id/item_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_launcher_foreground"
+            app:tint="@color/nav_item_icon_color"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/item_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:textColor="@color/nav_item_icon_color"
+            android:textSize="14sp"
+            android:layout_marginStart="8dp"
+            android:visibility="gone"
+            android:paddingHorizontal="12dp"
+            app:layout_constraintTop_toTopOf="@id/item_icon"
+            app:layout_constraintBottom_toBottomOf="@id/item_icon"
+            app:layout_constraintStart_toEndOf="@id/item_icon"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

@@ -120,3 +120,19 @@ class MainActivity : AppCompatActivity() {
         return name
     }
 }
+
+
+
+    val ktor_version = "3.0.1" // Use 3.0.1 or your specific 3.x version
+
+    // The core engine logic
+    implementation("io.ktor:ktor-client-core:$ktor_version")
+
+    // The "Muscles": OkHttp engine (Native Android optimized)
+    implementation("io.ktor:ktor-client-okhttp:$ktor_version")
+
+    // The "Eyes": To see the response in Logcat (What you asked for)
+    implementation("io.ktor:ktor-client-logging:$ktor_version")
+
+    // The "Bridge": Required for .asInput() to stream from Android URIs
+    implementation("io.ktor:ktor-utils:$ktor_version")
